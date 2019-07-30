@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const ytdl = require('ytdl-core');
 const { YTSearcher } = require('ytsearcher');
 const ytpl = require('ytpl');

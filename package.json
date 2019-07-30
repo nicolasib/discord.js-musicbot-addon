@@ -1,7 +1,7 @@
 {
-  "name": "discord.js-musicbot-addon",
-  "version": "13.6.0",
-  "description": "A simple Node.js based music extension/bot for Discord.js projects using YouTube.",
+  "name": "dj-evokk",
+  "version": "1.0.0",
+  "description": "Evokk dj topissimo",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -12,14 +12,6 @@
     "ytpl": "^0.1.14",
     "ytsearcher": "^1.2.2"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/DarkoPendragon/discord.js-musicbot-addon"
-  },
-  "bugs": {
-    "url": "https://github.com/DarkoPendragon/discord.js-musicbot-addon/issues"
-  },
-  "homepage": "https://github.com/DarkoPendragon/discord.js-musicbot-addon",
   "keywords": [
     "discord",
     "discord.js",
