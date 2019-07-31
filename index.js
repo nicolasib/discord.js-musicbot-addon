@@ -257,7 +257,7 @@ exports.start = (client, options) => {
                     masked: 'skip'
                 };
 
-                this.embedColor = (options && options.embedColor) || 'GREEN';
+                this.embedColor = (options && options.embedColor) || 'RED';
                 this.anyoneCanSkip =
                     options && typeof options.anyoneCanSkip !== 'undefined' ? options && options.anyoneCanSkip : false;
                 this.anyoneCanLeave =
@@ -719,13 +719,11 @@ exports.start = (client, options) => {
             if (!suffix) {
                 if (msg.channel.permissionsFor(msg.guild.me).has('EMBED_LINKS')) {
                     const embed = new Discord.RichEmbed();
-                    embed.setAuthor('Commands', msg.author.displayAvatarURL);
+                    embed.setAuthor('Comandos', msg.author.displayAvatarURL);
                     embed.setDescription(
-                        `Use \`${musicbot.botPrefix}${
-                            musicbot.help.name
-                        } command name\` for help on usage. Anyone with a role named \`${
+                        `Use \`${musicbot.botPrefix}${musicbot.help.name} nome do comando\` para ajuda. \`${
                             musicbot.djRole
-                        }\` can use any command.`
+                        }\` pode usar qualquer comando.`
                     );
                     // embed.addField(musicbot.helpCmd, musicbot.helpHelp);
                     const newCmds = Array.from(musicbot.commands);
@@ -935,7 +933,7 @@ exports.start = (client, options) => {
             if (msg.channel.permissionsFor(msg.guild.me).has('EMBED_LINKS')) {
                 const embed = new Discord.RichEmbed();
                 try {
-                    embed.setAuthor('Now Playing', client.user.avatarURL);
+                    embed.setAuthor('Tocando agora', client.user.avatarURL);
                     var songTitle = queue.last.title
                         .replace(/\\/g, '\\\\')
                         .replace(/\`/g, '\\`')
@@ -945,7 +943,7 @@ exports.start = (client, options) => {
                         .replace(/`/g, '\\`');
                     embed.setColor(musicbot.embedColor);
                     embed.addField(queue.last.channelTitle, `[${songTitle}](${queue.last.url})`, musicbot.inlineEmbeds);
-                    embed.addField('Queued On', queue.last.queuedOn, musicbot.inlineEmbeds);
+                    embed.addField('Adicionado a fila', queue.last.queuedOn, musicbot.inlineEmbeds);
                     if (!musicbot.bigPicture)
                         embed.setThumbnail(`https://img.youtube.com/vi/${queue.last.id}/maxresdefault.jpg`);
                     if (musicbot.bigPicture)
@@ -953,12 +951,12 @@ exports.start = (client, options) => {
                     const resMem = client.users.get(queue.last.requester);
                     if (musicbot.requesterName && resMem)
                         embed.setFooter(
-                            `Requested by ${client.users.get(queue.last.requester).username}`,
+                            `Pedido pelo mano ${client.users.get(queue.last.requester).username}`,
                             queue.last.requesterAvatarURL
                         );
                     if (musicbot.requesterName && !resMem)
                         embed.setFooter(
-                            `Requested by \`UnknownUser (ID: ${queue.last.requester})\``,
+                            `Pedido pelo mano \`UnknownUser (ID: ${queue.last.requester})\``,
                             queue.last.requesterAvatarURL
                         );
                     msg.channel.send({
@@ -977,9 +975,9 @@ exports.start = (client, options) => {
                         .replace(/~/g, '\\~')
                         .replace(/`/g, '\\`');
                     msg.channel.send(
-                        `Now Playing: **${songTitle}**\nRequested By: ${
+                        `Tocando agora: **${songTitle}**\nPedido pelo mano: ${
                             client.users.get(queue.last.requester).username
-                        }\nQueued On: ${queue.last.queuedOn}`
+                        }\nAdicionado a fila: ${queue.last.queuedOn}`
                     );
                 } catch (e) {
                     console.error(`[${msg.guild.name}] [npCmd] ` + e.stack);

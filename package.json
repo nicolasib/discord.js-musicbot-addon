@@ -1,17 +1,39 @@
 {
-  "name": "dj-evokk",
-  "version": "1.0.0",
-  "description": "Evokk dj topissimo",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "_from": "dj-evokk",
+  "_id": "dj-evokk@1.0.0",
+  "_inBundle": false,
+  "_integrity": "sha512-fbNLRT+PsytjljsY8ysiulSwX9CEiYqrRTU8uR72B97xyP6NWAeLs60gEu+W0UWcKsODdeB280GVpXB0klLGZg==",
+  "_location": "/dj-evokk",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "dj-evokk",
+    "name": "dj-evokk",
+    "escapedName": "dj-evokk",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
   },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/dj-evokk/-/dj-evokk-1.0.0.tgz",
+  "_shasum": "81891327b7622a80c928349d7d7df410d9400740",
+  "_spec": "dj-evokk",
+  "_where": "C:\\Users\\nicol\\Documents\\dev\\Discord\\evokk 1.1",
+  "author": {
+    "name": "demisex"
+  },
+  "bundleDependencies": false,
   "dependencies": {
     "ytdl-core": "^0.29.2",
     "ytpl": "^0.1.14",
     "ytsearcher": "^1.2.2"
   },
+  "deprecated": false,
+  "description": "Evokk dj topissimo",
   "keywords": [
     "discord",
     "discord.js",
@@ -20,6 +42,12 @@
     "addon",
     "plugin"
   ],
-  "author": "demisex",
-  "license": "ISC"
+  "license": "ISC",
+  "main": "index.js",
+  "name": "dj-evokk",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0"
 }
